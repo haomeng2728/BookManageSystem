@@ -12,7 +12,7 @@
     <select id="queryByKeyWithBook" resultType="Appointment">
         /*如何告诉Mybatis把结果映射到Appointment同时映射到book属性*/
         /*可以自由控制sql*/
-        select a.book_id, a.studentId, a.appoint_time, b.book_id "book.book_id", b.`name` "book.name", b.number "book.number"
+        select a.book_id, a.student_id, a.appoint_time, b.book_id "book.book_id", b.`name` "book.name", b.number "book.number"
         from appointment a
         inner join book b on a.book_id = b.book_id
         where a.book_id = #{bookId}
